@@ -7,7 +7,7 @@ export const chatbotController = new Elysia({ prefix: "/chatbot" }).post(
     console.log(body);
 
     return {
-      message: "OK",
+      message: "OK!!!",
     };
   },
   {

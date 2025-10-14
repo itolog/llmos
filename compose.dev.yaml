@@ -1,0 +1,17 @@
+services:
+  server-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: llmos-dev
+    environment:
+      NODE_ENV: development
+    env_file:
+      - .env.development
+    ports:
+      - "${PORT}:${PORT}"
+    restart: unless-stopped
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: bun run --watch src/main.ts
