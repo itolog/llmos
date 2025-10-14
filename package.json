@@ -1,8 +1,8 @@
 {
   "name": "llmos",
   "version": "1.0.50",
+  "module": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/main.ts"
   },
   "dependencies": {
@@ -17,6 +17,5 @@
     "globals": "^16.4.0",
     "prettier": "^3.6.2",
     "typescript-eslint": "^8.46.1"
-  },
-  "module": "src/index.js"
+  }
 }
