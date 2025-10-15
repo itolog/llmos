@@ -13,5 +13,4 @@ services:
     restart: unless-stopped
     volumes:
       - .:/app
-      - /app/node_modules
     command: bun run --watch src/main.ts

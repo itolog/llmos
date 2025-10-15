@@ -1,8 +1,10 @@
 import { Elysia } from "elysia";
+import { openapi } from "@elysiajs/openapi";
 import { chatbotController } from "./modules/chatbot";
 
 const app = new Elysia()
-  .get("/", "Hello World!")
+  .use(openapi())
+  .get("/", "Hello World!!")
   .use(chatbotController)
   .listen({ port: process.env.PORT, hostname: process.env.HOST });
 
